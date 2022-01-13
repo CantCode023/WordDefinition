@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Word Definition</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}"
+</head>
+<body>
+	<input type="text" placeholder="Word" id="wrd" class="wrd" onfocus="changeFocus(true)" onfocusout="changeFocus(false)">
+	<button><img src="https://img.icons8.com/material-outlined/16/000000/search--v1.png"/></button>
+	<script src="{{url_for('static', filename='js/script.js')}}"></script>	
+	<div class="container">
+		<div class="Word">
+			<h3 class="parent">Word: <h3 class="wordname" id="wordname"></h3></h3>
+		</div>
+		<div class="Phonetic">
+			<h3 class="parent">Phonetic: <h3 class="phon" id="phon"></h3></h3><audio controls id="audio" src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"></audio>
+		</div>
+		<div class="Origin">
+			<h3 class="parent">Origin: <h3 class="ori" id="ori"></h3></h3>
+		</div>
+		<div class="PartOSpeech">
+			<h3 class="parent">Part Of Speech: <h3 class="noun" id="noun"></h3></h3>
+		</div>
+		<div class="Definition">
+			<h3 class="parent">Definition: <h3 class="def" id="def"></h3></h3>
+		</div>
+	</div>
+	<br><br>
+	<a href="https://github.com/CantCode023/WordDefinition" target="_blank">Source Code</a>
+</body>
+</head>
+</html>

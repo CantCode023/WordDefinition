@@ -1,0 +1,24 @@
+button {
+	background: rgba(255,255,255,0);
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+
+img {
+	position: relative;
+	top: 3px;
+}
+
+.container div {
+	display: flex;
+	flex-direction: row;
+}
+
+.parent {
+	margin-right: 10px;
+}
+
+.phon {
+	margin-right: 10px;
+}
