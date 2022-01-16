@@ -22,3 +22,14 @@ img {
 .phon {
 	margin-right: 10px;
 }
+
+#syn, #ant {
+	display: flex;
+	flex-direction: column;
+}
+
+#syn > div, #ant > div {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: -15px;
+}

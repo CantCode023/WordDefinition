@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/getDefinition")
+@app.route("/getDefinition")    
 def getDefinition():
     try:
         word = request.args.get("word")

@@ -14,6 +14,17 @@ function getWordDefinition(word) {
 					document.getElementById("ori").innerHTML = data['origin']
 					document.getElementById("noun").innerHTML = data['meanings'][0]['partOfSpeech']
 					document.getElementById("def").innerHTML = data['meanings'][0]['definitions'][0]['definition']
+					console.log(data['meanings'][0]['definitions'][0]['synonyms'])
+					document.getElementById("syn").innerHTML = data['meanings'][0]['definitions'][0]['synonyms'].slice(0, 5).map((a, i) => 
+						`<div>
+							<h5>${i+1}. ${a}</h5>
+						</div>`	
+					).join('')
+					document.getElementById("ant").innerHTML = data['meanings'][0]['definitions'][0]['antonyms'].slice(0, 5).map((a, i) => 
+						`<div>
+							<h5>${i+1}. ${a}</h5>
+						</div>`	
+					).join('')
 				} else {
 					document.getElementById("wordname").innerHTML = "None"
 					document.getElementById("phon").innerHTML = "None"
@@ -21,6 +32,8 @@ function getWordDefinition(word) {
 					document.getElementById("ori").innerHTML = "None"
 					document.getElementById("noun").innerHTML = "None"
 					document.getElementById("def").innerHTML = "None"
+					document.getElementById("test1").innerHTML = "None"
+					document.getElementById("ant").innerHTML = "None"
 				}
 			})
 		})
