@@ -14,12 +14,13 @@ function getWordDefinition(word) {
 					document.getElementById("ori").innerHTML = data['origin']
 					document.getElementById("noun").innerHTML = data['meanings'][0]['partOfSpeech']
 					document.getElementById("def").innerHTML = data['meanings'][0]['definitions'][0]['definition']
-					console.log(data['meanings'][0]['definitions'][0]['synonyms'])
+					// This is how to use map in JavaScript lol, it's basically like table.foreach from lua lol.
 					document.getElementById("syn").innerHTML = data['meanings'][0]['definitions'][0]['synonyms'].slice(0, 5).map((a, i) => 
 						`<div>
 							<h5>${i+1}. ${a}</h5>
 						</div>`	
 					).join('')
+					// This is how to use map in JavaScript lol, it's basically like table.foreach from lua lol.
 					document.getElementById("ant").innerHTML = data['meanings'][0]['definitions'][0]['antonyms'].slice(0, 5).map((a, i) => 
 						`<div>
 							<h5>${i+1}. ${a}</h5>
@@ -32,7 +33,7 @@ function getWordDefinition(word) {
 					document.getElementById("ori").innerHTML = "None"
 					document.getElementById("noun").innerHTML = "None"
 					document.getElementById("def").innerHTML = "None"
-					document.getElementById("test1").innerHTML = "None"
+					document.getElementById("syn").innerHTML = "None"
 					document.getElementById("ant").innerHTML = "None"
 				}
 			})
@@ -40,7 +41,7 @@ function getWordDefinition(word) {
 }
 
 document.addEventListener("keypress", function(event) {
-	if (event.keyCode == 13 && isFocused == true) {
+	if (event.key == 'Enter' && isFocused == true) {
     	getWordDefinition(input.value)
   	}
 });
@@ -52,4 +53,3 @@ function changeFocus(bool) {
 button.onclick = function() {
 	getWordDefinition(input.value)
 }
-

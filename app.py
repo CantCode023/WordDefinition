@@ -17,3 +17,8 @@ def getDefinition():
         return json.loads(json.dumps(b[0]))
     except Exception:
         return {"status": "error"}
+
+@app.route("/endpoint")
+def endpoint():
+    print("Coming soon!")
+    return "Coming soon!"
